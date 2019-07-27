@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="getAPI.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Fav" Clicked="Fav_ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems> 
+    <Grid> 
+    <ListView x:Name="postsListView" 
+              ItemSelected="Posts_ListView_ItemSelected"> 
+        <ListView.ItemTemplate> 
+            <DataTemplate> 
+                <TextCell/> 
+            </DataTemplate> 
+        </ListView.ItemTemplate> 
+    </ListView> 
+</Grid> 
+    <StackLayout>
+        <ListView x:Name="Post_List">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding title}" Detail="{Binding body}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> 
+    </StackLayout>
+</ContentPage>
